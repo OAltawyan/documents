@@ -17,7 +17,7 @@ public class PhoneBookController : PhoneBookDemoControllerBase
     public ActionResult Index(GetPeopleInput input)
     {
         var output = _personAppService.GetPeople(input);
-        var model = ObjectMapper.MapTo<IndexViewModel>(output);
+        var model = ObjectMapper.Map<IndexViewModel>(output);
 
         return View(model);
     }
